@@ -24,23 +24,27 @@ Please answer the following questions below, you may edit the readme file to inc
 
 1. How would you describe acessibility on the web to someone new to programming?
 
-***NEEDS RESPONSE***
+You should be mindful of building your webpages to accomodate as many users as possible. You need to consider that people with disabilities and people using different sized devices may want to access your webpage.
 
 2. Talk about 3 different things you can do to ensure your website is accessible. 
 
-***NEEDS RESPONSE***
+One: Add the viewport metatag to the head of your HTML, which dynamically changes the viewport to fit the user's screen.
+
+Two: Add media query expressions (like max-width) to prevent the page from being larger than its parent on smaller devices.
+
+Three: Use descriptive alt text for images.
 
 3. How would you explain the concept of a variable to someone new to programming?
 
-***NEEDS RESPONSE***
+A variable is used to store, reference, and manipulate values in programs.
 
 4. What is the purpose of using functions in code?
 
-***NEEDS RESPONSE***
+Functions enable programmers to accomplish specific tasks, and can be re-used multiple times. They are a way to protect a block of code before they are invoked.
 
 5. How do you access a key inside of an object inside of an array?
 
-***NEEDS RESPONSE***
+array[index.key]
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
