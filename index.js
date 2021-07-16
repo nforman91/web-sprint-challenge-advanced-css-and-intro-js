@@ -245,62 +245,17 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
-function get20s(array, year){
+function get20s(array){
   let centuryArtists = [];
-  for(let i = 0; i < array.length; i++){
-    let artistYear = array[i].years.split(' - ');
-    if (artistYear[0] >= year && artistYear[0] <= year + 100 && artistYear[1] >= year && artistYear[1] <= year + 100){
-      centuryArtists.push(array[i].name);
+  for(let i = 0; i < array.length; i++) {
+    let artistYears = array[i]['years'].split(' - ');
+    if((artistYears[0] >= 1900 && artistYears[0] <= 1900 + 100) && (artistYears[1] >= 1900 && artistYears[1] <= 1900 + 100)) {
+      centuryArtists.push(array[i]['name']);
     }
-  }
-  return centuryArtists;
+  }return centuryArtists;
 }
 
-console.log(get20s(artists));
-
-// function getAverageWordLength(originalFlavors) { }
-//   let avgWordLength = 0;
-//   for(i = 0; i < originalFlavors.length; i++){
-//     let words = originalFlavors[i].split(' ,');
-//     avgWordLength += originalFlavors.length / words.length;
-//   }
-//   return avgWordLength;
-// }
-
-// console.log(getAverageWordLength(originalFlavors));
-
-// function getLongReviews(array) {
-//     const reviewList = [];
-//     for(let i = 0; i < array.length; i++)
-//       if(array[i].feedback.split(' ').length > 15)
-//       reviewList
-//   }
-
-//   let centuryArtists = [];
-//   let Year = years.split(' - ');
-//   const [birth, death] = array[i.Year];
-//   for(let i = 0; i < array.length; i++){
-//     if ((array[i].birth >= year && array[i].birth <= year + 100) && (array[i].death >= year && array[i].death <= year + 100)){
-//       centuryArtists.push(array[i].name);
-//     }
-//   }
-//   return centuryArtists;
-// }
-
-// console.log('task 4:', get20s(artists, 1900));
-
-
-// function getReviewByRating(array, rating) {
-//   let myRating = [];
-//   for (let i = 0; i < array.length; i++) {
-//     if (array[i].rating >= rating && array[i].rating < rating + 1) {
-//       myRating.push(array[i]);
-//     }
-//   }
-//   return myRating;
-// }
-
-// console.log('Stretch 1', getReviewByRating(reviews, 4));
+console.log('task 4:', get20s(artists));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
