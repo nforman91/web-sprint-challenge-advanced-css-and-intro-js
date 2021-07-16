@@ -249,7 +249,8 @@ function get20s(array){
   let centuryArtists = [];
   for(let i = 0; i < array.length; i++) {
     let artistYears = array[i]['years'].split(' - ');
-    if((artistYears[0] >= 1900 && artistYears[0] <= 1900 + 100) && (artistYears[1] >= 1900 && artistYears[1] <= 1900 + 100)) {
+    let centuryStart = 1900;
+    if((artistYears[0] >= centuryStart && artistYears[0] <= centuryStart + 100) && (artistYears[1] >= centuryStart && artistYears[1] <= centuryStart + 100)) {
       centuryArtists.push(array[i]['name']);
     }
   }return centuryArtists;

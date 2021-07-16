@@ -32,7 +32,7 @@ One: Add the viewport metatag to the head of your HTML, which dynamically change
 
 Two: Add media query expressions (like max-width) to prevent the page from being larger than its parent on smaller devices.
 
-Three: Use descriptive alt text for images.
+Three: Use descriptive alt text for images in case the image fails to display, or so screen readers can read them out.
 
 3. How would you explain the concept of a variable to someone new to programming?
 
