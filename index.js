@@ -230,7 +230,7 @@ Use getArtistByIndex to do the following:
 Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
 function getArtistByIndex(array, number) {
-  return `the artist at index ${artists[number].id} is ${artists[number].name}`
+  return `the artist at index ${artists[number].id} is ${artists[number].name}`;
 }
 
 console.log('task 3:', getArtistByIndex(artists, 0));
@@ -269,7 +269,7 @@ For example, if removeArtist is invoked with the artists array and the number 0,
 
 function removeArtist(array, number) {
   for(let i = 0; i < array.length; i++){
-    if(array[i] === number){
+    if(array[i].id === number){
       array.splice(i, 1);
     }
   }
