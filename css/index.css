@@ -188,7 +188,7 @@ h1{
 .artists-container{
     flex-direction: column;
     justify-content: space-evenly;
-    margin-bottom: 20%;
+    margin: 0% 10% 10% 10%;
 }
 
 .artist{
@@ -199,18 +199,19 @@ h1{
 .artist a{
     display:flex;
     justify-content:center;
+    font-size: 1.5rem;
     margin: 5% 10%;
 }
 
 .artist img{
     height: 25vh;
-    width: 50%;
+    width: 60%;
 }
 
 .bio{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 0 auto;
-    padding: 0 5%;
+    padding: 0 10%;
 }
 
 }
