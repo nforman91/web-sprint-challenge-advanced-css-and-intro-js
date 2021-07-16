@@ -208,10 +208,10 @@ Practice accessing data above by console.log-ing following items:
 (no functions needed) */
 
 //(1) Name of the first artist (0th index) in the array
-console.log('task 1:', artists[0].name);
+console.log('task 1.1:', artists[0].name);
 
 //(2) Bio of the third artist (2nd index) in the array 
-console.log('task 1:', artists[2].bio);
+console.log('task 1.2:', artists[2].bio);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -244,10 +244,17 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
-function get20s(/*Your Code Here*/) {
-  /*Your Code Here*/
+function get20s(array, years) {
+  let yearsLived = [];
+  for(let i = 0; i < array.length; i++){
+    if(array[i].years.split(' - ') >= years && array[i].years.split(' - ') <= years + 100){
+      yearsLived.push(array[i].name);
+    }
+  }
+  return yearsLived;
 }
 
+console.log('task 4:', get20s(artists, 1900));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -259,9 +266,16 @@ Use removeArtist to do the following:
 
 For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function removeArtist(array, number) {
+  for(let i = 0; i < array.length; i++){
+    if(array[i] === number){
+      array.splice(i, 1);
+    }
+  }
+  return array.length;
 }
+
+console.log('task 5:', removeArtist(artists, 0));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -280,11 +294,19 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function addArtist(array) {
+  array.push({
+    id: 20,
+    name: 'Nathan Forman',
+    years: '1991 - 2021',
+    genre: 'Web Design',
+    nationality: 'American',
+    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Quasi labore vero, repudiandae cumque error facilis saepe voluptatibus molestiae iure tempora minima delectus rerum nostrum illo.Voluptas est eligendi fugiat rerum.'
+  });
+  return array;
 }
 
-
+console.log('task 6:', addArtist(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
